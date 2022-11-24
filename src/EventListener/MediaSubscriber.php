@@ -12,7 +12,7 @@ use Doctrine\ORM\Events;
 
 class MediaSubscriber implements EventSubscriberInterface
 {
-    public function __construct(protected asyMediaManager $manager)
+    public function __construct(protected EasyMediaManager $manager)
     {
     }
 
