@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>{{ 'title'|trans|striptags|raw }}</title>
-        <link rel="stylesheet" href="{{ asset('bundles/easyadmin/app.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('app.css', constant('EasyCorp\\Bundle\\EasyAdminBundle\\Asset\\AssetPackage::PACKAGE_NAME')) }}">
         <link rel="stylesheet" href="{{ asset('bundles/easymedia/style/style.css') }}"/>
     </head>
     <body>
