@@ -11,7 +11,7 @@
         <div id="media-holder" class="fullscreen">
             {% include '@EasyMedia/manager.html.twig' with {'browser': true, 'modal': true, "restrict": restrict, 'hideExt' : ["jpeg"]}  %}
         </div>
-        <script src="{{ asset('bundles/easymedia/js/app.js') }}"></script>
+        <script src="{{ asset('app.js', constant('EasyCorp\\Bundle\\EasyAdminBundle\\Asset\\AssetPackage::PACKAGE_NAME')) }}"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
         <style>
             html, body, #media-holder{

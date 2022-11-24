@@ -27,5 +27,5 @@
 {# scripts #}
 {% block body_javascript %}
     {{ parent() }}
-    <script src="{{ asset('bundles/easymedia/js/app.js') }}"></script>
+    <script src="{{ asset('app.js', constant('EasyCorp\\Bundle\\EasyAdminBundle\\Asset\\AssetPackage::PACKAGE_NAME')) }}"></script>
 {% endblock %}
