@@ -109,7 +109,7 @@
             <div class="level-right hidden sm:flex">
                 {# download #}
                 <div class="level-item">
-                    <span class="icon is-large link is-black" v-if="!selectedFileIs('oembed')"
+                    <span class="icon is-large link" v-if="!selectedFileIs('oembed')"
                           title="{{ 'download.file'|trans }}"
                           v-tippy="{arrow: true}"
                           @click.prevent="saveFile(selectedFile)">
