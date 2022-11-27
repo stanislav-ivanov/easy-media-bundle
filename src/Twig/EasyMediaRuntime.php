@@ -178,7 +178,7 @@ class EasyMediaRuntime implements RuntimeExtensionInterface
             return $this->cacheManager->getBrowserPath($media->getPath(), $format);
         }
 
-        if ($this->fileIsType($media, 'oembed')) {
+        if ($this->fileIsType($media, 'oembed') && $media->getMeta('url')) {
             return $media->getMeta('url');
         }
 
@@ -206,7 +206,7 @@ class EasyMediaRuntime implements RuntimeExtensionInterface
             'title' => $media->getMeta('title', $media->getName()),
         ];
         $code = $media->getMeta('code');
-        if ('reference' === $format) {
+        if ('reference' === $format && $code) {
             $params += $code;
         }
 
@@ -226,7 +226,7 @@ class EasyMediaRuntime implements RuntimeExtensionInterface
         $box = $media->getMeta('dimensions');
 
         $params += [
-            'ratio' => $box['ratio'] ?: null,
+            'ratio' => $box['ratio'] ?? null,
         ];
 
         if ('reference' === $format) {
